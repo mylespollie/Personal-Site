@@ -2,8 +2,6 @@ body {
 	display: contents;
 }
 
-
-
 #wrapper {
 	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
     font-size: 1.5rem;
@@ -49,8 +47,6 @@ img {
 	margin: auto;
 	height: 4vh;
 }
-
-
 
 .background-color{
 	z-index: 1;

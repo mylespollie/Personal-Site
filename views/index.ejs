@@ -12,15 +12,12 @@
 	var colors = ['#726a95', '#709fb0', '#a0c1b8', '#f4ebc1'];
 	var mouseDown = false;
 
-
 	for (var i = 0; i < 15; i++) {
-		//var rectSize = Math.floor(Math.random() * 250);
 		var rect = new Rectangle([0, 0], [25, 25]);
 		var path = new Path.Rectangle(rect, 6);
 		var point = [Math.floor(Math.random() * window.innerWidth), Math.floor(Math.random() * window.innerHeight)]
 		path.scale(Math.floor(Math.random() * 8));
 		var maxPoint = new Point(window.innerWidth, window.innerHeight);
-		console.log(window.innerWidth);
 		var randomPoint = Point.random();
 
 
@@ -31,31 +28,34 @@
 		path.position = maxPoint * randomPoint;
 	}
 
+	var children = project.activeLayer.children;
+
 	function onMouseMove(event) {
 		mousePoint = event.point;
-		console.log(mousePoint);
 	}
 
-	var children = project.activeLayer.children;
 
 	function onMouseDown(event) {
 		amount = 1;
 		var rect = new Rectangle([0, 0], [25, 25]);
 		rect.center = mousePoint;
 		var path = new Path.Rectangle(rect, 6);
+
 		path.scale(amount);
 		path.fillColor = colors[Math.floor(Math.random() * 4)];
 		path.strokeColor = 'black';
 		path.strokeWidth = 5;
 		path.position = mousePoint;
 		path.blendMode = 'xor';
+
 		mouseDown = true;
 	}
 
+
 	function onMouseUp(event) {
 		mouseDown = false;
-		console.log(mouseDown);
 	}
+
 
 	function onFrame(event) {
 		children = project.activeLayer.children;
@@ -65,9 +65,11 @@
 			amount+=0.0005;
 			item.scale(amount);
 		}
+
 		if(children.length >= 25){
 			children.shift();
 		}
+
 		for (var i = 0, l = children.length; i < l; i++) {
 			var item = children[i];
 			var delta = (mousePoint - item.position) / (i + 5);
