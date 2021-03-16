@@ -1,0 +1,85 @@
+body {
+	display: contents;
+}
+
+
+
+#wrapper {
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 250%;
+    text-align: right;
+    border: 5px solid black;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.widener {
+	padding: 20px;
+}
+
+#centertext {
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+  	position: absolute;
+  	bottom:50%;
+  	z-index: 2;
+  	left:25%;
+  	margin:auto;
+}
+
+body #centertext{
+	width:fit-content;
+	border: 5px solid black;
+    border-radius: 25px;
+    background-color: white;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	height: inherit;
+}
+
+img {
+	display: block;
+	margin: auto;
+	height: 4vh;
+}
+
+
+
+.background-color{
+	z-index: 1;
+	color: #000;
+	font-size: 3.2vw;
+	font-weight: bold;
+	letter-spacing: 1vw;
+	text-align: center;
+	background: rgba(255, 253, 160, 1);
+	background: -webkit-linear-gradient( left, #00ffff 0%, #726a95 20%, #567783 40%, #a0c1b8 60%, #f4ebc1 80%, #00ffff 100%) repeat;
+	-webkit-background-clip: text;
+	-ms-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-ms-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	text-fill-color: transparent;
+	-webkit-animation-name: masked-animation;
+	-webkit-animation-duration: 350s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -8000px -3000px;
+  }
+}
